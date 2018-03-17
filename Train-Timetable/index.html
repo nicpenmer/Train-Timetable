@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <title>Train Schedule</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Train Schedule</h1>
+            <h3 class="text-center">A hypothetical but accurate schedule of trains.</h3>
+            <h4 class="text-center" ><span id="currentTime"></span></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lr-12">
+            <div id="tableContainer" class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Current Schedule</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Insert employee info rows here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lr-12">
+            <div id="tableContainer" class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add Train Here</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="formContainer">
+                            <form>
+                                <div class="form-group">
+                                    <label for="Name">Train Name</label>
+                                    <input type="text" class="form-control" id="trainName" placeholder="Train Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="destination">Destination</label>
+                                    <input type="text" class="form-control" id="headingT" placeholder="Destination">
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstTrain">First Train Time</label>
+                                    <input type="number" class="form-control" id="firstT" placeholder="First Train">
+                                </div>
+                                <div class="form-group">
+                                    <label for="frequency">Frequency (min)</label>
+                                    <input type="number" class="form-control" id="howOften" placeholder="Frequency">
+                                </div>
+                                <button type="button" id="update" class="btn btn-success">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/javascript.js"></script>
+</body>
+
+</html>
